@@ -1,0 +1,28 @@
+name: beansync
+version: '0.2.0-RELEASE'
+main: org.asylum_media.beansync.Beansync
+api-version: '1.21'
+load: STARTUP
+authors: [ Asylum_Media ]
+description: CB economy bridge, add your own scoreboard economy objective to the config!
+
+commands:
+  beans:
+    description: Beans utility command
+    usage: /beans [get|has <amount>]
+
+permissions:
+  beans.admin:
+    description: Full access to all Beansync commands
+    default: op
+
+  beans.take:
+    description: Allows removing Beans from yourself
+    default: false
+
+  beans.give:
+    description: Allows adding Beans to yourself
+    default: false
+
+softdepend: [Vault]
+
