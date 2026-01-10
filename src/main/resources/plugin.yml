@@ -1,5 +1,5 @@
 name: beansync
-version: '0.2.0-RELEASE'
+version: '0.2.1-RELEASE'
 main: org.asylum_media.beansync.Beansync
 api-version: '1.21'
 load: STARTUP
