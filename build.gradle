@@ -3,7 +3,7 @@ plugins {
 }
 
 group = 'org.asylum_media.beans'
-version = '0.2.1'
+version = '0.3.0'
 
 java {
     toolchain {
@@ -13,15 +13,30 @@ java {
 
 repositories {
     mavenCentral()
+
     maven {
-        name = 'papermc'
-        url = 'https://repo.papermc.io/repository/maven-public/'
+        name = "papermc"
+        url = uri("https://repo.papermc.io/repository/maven-public/")
+    }
+
+    maven {
+        name = "codemc"
+        url = uri("https://repo.codemc.org/repository/maven-public/")
+    }
+
+    maven {
+        name = "spigotmc-snapshots"
+        url = uri("https://hub.spigotmc.org/nexus/content/repositories/snapshots/")
     }
 }
 
+
+
 dependencies {
-    compileOnly 'io.papermc.paper:paper-api:1.21.10-R0.1-SNAPSHOT'
+    compileOnly "io.papermc.paper:paper-api:1.21.10-R0.1-SNAPSHOT"
+    compileOnly "net.milkbowl.vault:VaultAPI:1.7"
 }
+
 
 tasks.withType(JavaCompile).configureEach {
     options.encoding = 'UTF-8'
